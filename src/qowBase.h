@@ -57,7 +57,7 @@
 #define _AUX_DISPLAY_C
 #define _AUX_DISPLAY_IMPL
 
-#include "../qwadro_afx/mmux/auxIcd.h"
+#include "../qwadro_afx/coree/ux/auxIcd.h"
 
 #ifndef AUX_DRV_SRC
 #   ifdef _DEBUG

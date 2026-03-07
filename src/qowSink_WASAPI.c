@@ -122,7 +122,7 @@ _QOW afxError _QowSinkCtorCb(afxSink asi, void** args, afxUnit invokeNo)
 
     afxUri dev;
     afxUri endpoint;
-    //AfxClipUriDevice(&dev, &endpoint);
+    //AfxExcerptUriDevice(&dev, &endpoint);
     
     "//./wasapi/mic";
     "//./wasapi/aux";

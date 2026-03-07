@@ -44,8 +44,8 @@
 #define _AUX_DISPLAY_IMPL
 #define _AVX_SURFACE_C
 #define _AVX_SURFACE_IMPL
-#include "../qwadro_afx/mmux/auxIcd.h"
-#include "../qwadro_afx/targa/avxIcd.h"
+#include "../qwadro_afx/coree/ux/auxIcd.h"
+#include "../qwadro_afx/coree/draw/avxIcd.h"
 #include "../../icd_tarzgl4/src/zglDefs.h"
 
 #define USE_DXGI_DISPLAY 1

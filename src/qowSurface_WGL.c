@@ -463,6 +463,7 @@ _QOW afxError _ZglDoutPresent_WGL(afxDrawQueue dque, avxPresentation* ctrl)
     {
         if (!wglMakeCurrentWIN(dout->hDC, dout->wgl.hSwapRC))
         {
+            AfxReportError("Could make hSwapRC current on hDC.");
             AfxThrowError();
             return err;
         }
@@ -1584,11 +1585,16 @@ _QOW afxError _ZglDoutAdjust_WGL(afxSurface dout, afxRect const* area, afxBool f
 
 _QOW afxError _ZglDoutImplRegenBuffers(afxSurface dout, afxBool build)
 {
-    _AvxDoutRegenBuffers(dout, build);
+    afxError err = { 0 };
+
+    if (_AvxDoutRegenBuffers(dout, build))
+        AfxThrowError();
 
     if (dout->wgl.swaps)
         for (afxUnit i = 0; i < dout->m.swapCnt; i++)
             dout->wgl.swaps[i].swapFboReady = FALSE;
+
+    return err;
 }
 
 _QOW afxError _ZglDoutIoctl_WGL(afxSurface dout, afxUnit code, va_list ap)

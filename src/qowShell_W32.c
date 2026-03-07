@@ -25,7 +25,7 @@
 #include "qowBase.h"
 #include "qowVideo_W32.h"
 #include "qowAudio_W32.h"
-#include "../qwadro_afx/targa/avxSurfaceDDK.h"
+#include "../qwadro_afx/coree/draw/avxSurfaceDDK.h"
 //#include "../qwadro_afx/src/mix/ddi/avxImpl_Sink.h"
 
 QOW afxError _QowDoutDtorCb_GDI(afxSurface dout);
